@@ -4,13 +4,16 @@ body {
     max-width: 40em;
     margin: auto;
     text-align: justify;
+    color: #0c1445;
 }
 
-a, h2 { color:rgb(225, 127, 74) }
-
+a, h2 { color:rgb(225, 127, 74);}
+h2 {border-width: 1em;   
+}
 .slika {
     float: left;
     margin-right: 2em;
+    width: 250px;
 }
 .slika p {
     font-size: 0.7em;
@@ -18,6 +21,6 @@ a, h2 { color:rgb(225, 127, 74) }
     margin: 0.5em 0 1em 0;
 }
 .slika img {
-    width: 100%;
+    width: 250px;
     height: auto;
 }
