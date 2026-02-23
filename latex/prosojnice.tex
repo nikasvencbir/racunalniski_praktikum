@@ -1,0 +1,60 @@
+\documentclass{beamer}
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb, bbm}
+
+\usetheme{metropolis}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{caption}[numbered]
+
+\usepackage{palatino}
+\usefonttheme{serif}
+
+% Krožne matrike
+% Samo Primer
+\institute[FMF]{Fakulteta za matematiko in fiziko}
+
+% 
+% Pozor: dokler ne dodate vsaj enega okolja za prosojnico, 
+% se datoteka ne bo prevedla.
+% 
+
+\begin{document}
+
+
+
+
+% začetek definicije
+    Krožna matrika ?? je matrika oblike 
+
+        % c_0  c_{n-1}    c_2  c_1 
+        % c_1  c_0    c_{n-1}  c_2 
+        % c_2  c_1    c_0  c_{n-1} 
+        % 
+        % c_{n-1}  c_{n-2}    c_1  c_0
+        
+% konec definicije
+
+
+
+% začetek neoštevilčenega seznama
+        % lastnost 1
+        Lastni vektorji krožne matrike so 
+        $v_j = (1, \omega_j, \omega_j^2, \ldots, \omega_j^{n-1})^T$, 
+        kjer je ?? za $j=0, \ldots, n-1$.
+        % lastnost 2
+        Lastni vektorji krožne matrike so stolpci matrike enotske diskretne Fourierjeve transformacije, 
+        ki jo lahko prikažemo kot Vandermondovo matriko.
+        % lastnost 3
+        Krožne matrike tvorijo komutativno algebro, ker je za poljubni dve matriki 
+        $A$ in $B$, vsota $A + B$ tudi krožna matrika, prav tako je krožna matrika tudi njun produkt 
+        $AB$, ter tudi velja $AB = BA$.
+% konec neoštevilčenega seznama
+
+
+
+
+\end{document}
+

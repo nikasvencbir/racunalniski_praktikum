@@ -13,6 +13,7 @@ body {
 
 .slika {
     margin: 0 auto;
+    width: 400px;
 }
 
 img {
@@ -28,7 +29,7 @@ h2 {
 }
 
 tr:nth-child(even) {
-    
+   background-color: rgba(225, 127, 74, 0.1);
 }
 
 table {
@@ -37,12 +38,12 @@ table {
     margin: 1.5em 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
-
 td, th {
     padding: 0.75em;
     border: 1px solid #ccc; 
     text-align: left;
     font-size: 0.95em; 
+    font-weight: bold;
 }
 
 th {

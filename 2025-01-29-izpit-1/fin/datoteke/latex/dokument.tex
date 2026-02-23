@@ -10,24 +10,30 @@
 \usepackage{subcaption}
 \usepackage{booktabs}
 \usepackage[margin=2cm]{geometry}
+\newenvironment{definicija}{\begin{definition}}{\end{definition}}
+\newcommand{\p}{\mathbb{P}}
+\newcommand{\lam}[1]{\lambda_{#1}}
 
 % Podatki za glavo dokumenta:
-% Dinamika demokratskih izborov
-% Matej Rojec
-% 2.2.2025
+\title{Dinamika demokratskih izborov}
+\author{Matej Rojec}
+\date{2.2.2025}
 
 \begin{document}
 
 % Glava dokumenta:
+\maketitle
 % naslov
-% povzetek  
-Esej obravnava Galamov model in njegove dinamike ??. 
+% povzetek 
+\begin{abstract}
+Esej obravnava Galamov model in njegove dinamike \cite{galam2015stubbornness,galam2016trump,galam2020tipping}. 
 % Ključi za sklic na literaturo: galam2015stubbornness, galam2016trump, galam2020tipping
 Predstavi osnovni model, njegove razširitve ter poudari njegovo uporabnost pri 
 analizi dinamike mnenj v sistemih, ki jih zaznamujejo pomembni dogodki in predsodki. 
 Analizirane so dinamike modela, razširitve pa naslavljajo njegove omejitve in 
 povečujejo uporabnost. Obravnavan je primer volitev Donalda Trumpa leta 2016, 
 ki ponazarja uporabnost modela.
+\end{abstract} 
 
 \section{Uvod}
 
@@ -60,13 +66,22 @@ verjetnostjo $k$, mnenje $B$ pa z verjetnostjo $(1-k)$, kar je odvisno od predso
 Po več razpravah, ki transformirajo začetno podporo $p_0$ v $p_n$, model doseže končni čas $T$. 
 Kandidat $A$ zmaga, če $p_T > \frac{1}{2}$, sicer zmaga kandidat $B$.
 Spremembe podpore $A$ in $B$ se izračunajo kot:
-\( p_n := \sum_{r=1}^{L} a_r PPP_r(p_{n-1}) \),
-kjer je $L$ največja velikost skupine, $a_r$ delež skupin velikosti $r$, $PPP_r$ pa verjetnost, 
+\( p_n := \sum_{r=1}^{L} a_r \p{_r(p_{n-1})} \),
+kjer je $L$ največja velikost skupine, $a_r$ delež skupin velikosti $r$, $\p{_r}$ pa verjetnost, 
 da skupina s $r$ agenti podpira izbiro $A$.
 
-Verjetnost $PPP_r$ je izražena kot:
+Verjetnost $\p{_r}$ je izražena kot:
 % začetek enačbe
-% PPP_{r}(p_{n-1}) = 
+\begin{align}
+   \p{_{r}(p_{n-1})} =
+   \begin{cases}
+     \sum_{m=\frac{r+1}{2}}^r \binom{r}{m} p_{n-1}^m (1-p_{n-1})^{r-m} 
+     &\text{za lihe $r$},
+     \\\sum_{m=\frac{r}{2} + 1}^r \binom{r}{m} p_{n-1}^m (1-p_{n-1})^{r-m} + k\cdot \binom{r}{\frac{r}{2}} p_{n-1}^\frac{r}{2} (1-p_{n-1})^\frac{r}{2}
+     & \text{za sode $r$}.
+   \end{cases}
+\end{align}
+% \p{_{r}(p_{n-1}) = 
     % \sum_{m=\frac{r+1}{2}}^r \binom{r}{m} p_{n-1}^m (1-p_{n-1})^{r-m} 
     % za lihe $r$,
     % \sum_{m=\frac{r}{2} + 1}^r \binom{r}{m} p_{n-1}^m (1-p_{n-1})^{r-m} + k\cdot \binom{r}{\frac{r}{2}} p_{n-1}^\frac{r}{2} (1-p_{n-1})^\frac{r}{2}
@@ -86,7 +101,17 @@ kot funkcija prejšnje verjetnosti $p_{n-1}$ za različne vrednosti $r$ pri $k=1
     % Napis: Trenutna verjetnost $p_n$ kot funkcija prejšnje verjetnosti $p_{n-1}$ za $k = 1$ in $r = 3$ v intervalu $p_{n-1} \in (0, 1)$.
     % Datoteka: r3.png
     % Oznaka: fig:r3
-
+\begin{subfigure}{0.4\textwidth}
+        \includegraphics[width=\textwidth]{r3.png} % Dodaš širino tukaj
+        \caption{Trenutna verjetnost $p_n$ kot funkcija prejšnje verjetnosti $p_{n-1}$ za $k = 1$ in $r = 3$ v intervalu $p_{n-1} \in (0, 1)$.}
+        \label{fig:r3} % Label prestaviš pod caption
+    \end{subfigure}
+    \hfil
+    \begin{subfigure}{0.4\textwidth}
+      \includegraphics[width=\textwidth]{r4.png}  
+      \caption{Trenutna verjetnost $p_n$ kot funkcija prejšnje verjetnosti $p_{n-1}$ za $k = 1$ in $r = 4$ v intervalu $p_{n-1} \in (0, 1)$.}
+      \label{fig:r4}
+    \end{subfigure}
     % Slika 2
     % Napis: Trenutna verjetnost $p_n$ kot funkcija prejšnje verjetnosti $p_{n-1}$ za $k = 1$ in $r = 4$ v intervalu $p_{n-1} \in (0, 1)$.
     % Datoteka: r4.png
@@ -94,5 +119,6 @@ kot funkcija prejšnje verjetnosti $p_{n-1}$ za različne vrednosti $r$ pri $k=1
 \end{figure}
 
 % Literatura
-
+\bibliographystyle{plain}
+\bibliography{viri}
 \end{document}

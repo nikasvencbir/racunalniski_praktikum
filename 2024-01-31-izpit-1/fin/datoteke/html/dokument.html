@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <!-- * * *  * * *  * * *  * * *  * * *
 Ta naloga je sestavljena iz dveh delov: HTML in CSS.
 Drugi del je v datoteki oblikovanje.css.
@@ -18,8 +18,8 @@ izvorna koda dokumenta veljaven in urejen HTML5.
      Oblikujte odstavke na koncu dokumenta v neoštevilčen seznam.
      * * *  * * *  * * *  * * *  * * * -->
 
-<html>
-
+<html lang="en">
+    <link rel="stylesheet" href="oblikovanje.css">
 <head>
     <meta charset="UTF-8">
     <title>Persian cats</title>
@@ -29,10 +29,10 @@ izvorna koda dokumenta veljaven in urejen HTML5.
 <body>
     <h1>Persian cats</h1>
 
-    <p>The content of this page has been slightly adapted from the Wikipedia page on Persian cat.</p>
+    <p>The content of this page has been slightly adapted from the Wikipedia page on <a href="https://en.wikipedia.org/wiki/Persian_cat">Persian cat</a>.</p>
     <!-- https://en.wikipedia.org/wiki/Persian_cat -->
 
-    <p>The Persian cat</strong> is a long-haired breed of cat characterized by its round face and short muzzle.
+    <p><strong>Persian cat</strong> is a long-haired breed of cat characterized by its round face and short muzzle.
         It is also known as the "Persian Longhair" in English-speaking countries.</p>
 
     <p>The first documented ancestors of Persian cats were imported into Italy from Persia around 1620. Recognized
@@ -51,6 +51,7 @@ izvorna koda dokumenta veljaven in urejen HTML5.
     <div class="persian">
         <!-- Tu vstavite sliko z atributom alt, ki naj ima vrednost "Two beautiful Persians" -->
         <!-- persian.jpg -->
+         <img src="persian.jpg" alt="Two beautiful Persians">
         <p>Two traditional Persian cats</p>
     </div>
 
@@ -79,25 +80,32 @@ izvorna koda dokumenta veljaven in urejen HTML5.
     <p>The modern Persian faces many health problems:</p>
 
     <!-- začetek neoštevilčenega seznama -->
+     <ul>
 
-        It has a large rounded skull and shortened face and nose. This facial conformation
-        makes the breed prone to breathing difficulties, skin and eye problems, and birthing difficulties.
+       <li> It has a large rounded skull and 2 face and nose. This facial conformation
+        makes the breed prone to breathing difficulties, skin and eye problems, and birthing difficulties.</li>
 
-        Anatomical abnormalities associated with brachycephalic breeds can cause shortness of breath.
+        <li> Abnormalities associated with brachycephalic breeds can cause shortness of breath.</li>
          
-        Malformed tear ducts cause epiphora, an overflow of tears onto the face, which is common but primarily cosmetic. 
+        <li>Malformed tear ducts cause epiphora, an overflow of tears onto the face, which is common but primarily cosmetic. </li>
         
-        Entropion, the inward folding of the eyelids, causes the eyelashes to rub against the cornea, and can lead to tearing,
-        pain, infection and cornea damage.
+        <li>
+            Entropion, the inward folding of the eyelids, causes the eyelashes to rub against the cornea, and can lead to tearing,
+            pain, infection and cornea damage.
+        </li>
         
-        Similarly, in upper eyelid trichiasis or nasal fold trichiasis, eyelashes/hair from
-        the eyelid and hair from the nose fold near the eye grow in a way which rubs against the cornea.
+        <li>
+            Similarly, in upper eyelid trichiasis or nasal fold trichiasis, eyelashes/hair from
+            the eyelid and hair from the nose fold near the eye grow in a way which rubs against the cornea.
+        </li>
          
-        Dystocia, an abnormal or difficult labor, is relatively common in Persians. Consequently, stillbirth rate is higher
-        than normal, ranging from 16.1% to 22.1%, and one 1973 study puts kitten mortality rate (including
-        stillborns) at 29.2%. A veterinary study in 2010 documented the serious health problems caused by the brachycephalic
-        head.
-
+        <li>
+            Dystocia, an abnormal or difficult labor, is relatively common in Persians. Consequently, stillbirth rate is higher
+            than normal, ranging from 16.1% to 22.1%, and one 1973 study puts kitten mortality rate (including
+            stillborns) at 29.2%. A veterinary study in 2010 documented the serious health problems caused by the brachycephalic
+            head.
+        </li>
+     </ul>
     <!-- konec neoštevilčenega seznama -->
 
 </body>

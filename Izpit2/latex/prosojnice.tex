@@ -1,0 +1,82 @@
+\documentclass{beamer}
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb, bbm}
+
+\usetheme{metropolis}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{caption}[numbered]
+
+\usepackage{palatino}
+\usefonttheme{serif}
+\theoremstyle{definition}
+\newtheorem{definicija}{Definicija}
+% Krožne matrike
+% Samo Primer
+\title{Krožne matrike}
+\author{Samo Primer}
+\date{}
+\institute[FMF]{Fakulteta za matematiko in fiziko}
+
+% 
+% Pozor: dokler ne dodate vsaj enega okolja za prosojnico, 
+% se datoteka ne bo prevedla.
+% 
+
+\begin{document}
+\begin{frame}
+        \titlepage
+\end{frame}
+
+
+\begin{frame}
+        \frametitle{Definicija}
+% začetek definicije
+\begin{definicija}
+    Krožna matrika $n \times n$ je matrika oblike 
+\begin{equation*}
+  \left(
+  \begin{matrix}
+    c_0 & c_{n-1} & \cdots & c_2 & c_1 \\
+    c_1 & c_0 & \cdots & c_{n-1} & c_2 \\
+    c_2 & c_1 & \cdots & c_0 & c_{n-1} \\
+    \vdots  & \vdots  & \ddots & \vdots & \vdots \\
+    c_{n-1} & c_{n-2} & \cdots & c_1 & c_0
+  \end{matrix}
+  \right)
+\end{equation*}
+\end{definicija}       
+% konec definicije
+\end{frame}
+
+\begin{frame}
+        \frametitle{Lastnosti}
+% začetek neoštevilčenega seznama
+\begin{itemize}[<+->]
+        % lastnost 1
+        \item \label{lastnost 1}Lastni vektorji krožne matrike so 
+        $v_j = (1, \omega_j, \omega_j^2, \ldots, \omega_j^{n-1})^T$, 
+        kjer je $\omega_j=e^\frac{2\pi i j}{n}$ za $j=0, \ldots, n-1$.
+        % lastnost 2
+        \item \label{lastnost 2} Lastni vektorji krožne matrike so stolpci matrike enotske diskretne Fourierjeve transformacije, 
+        ki jo lahko prikažemo kot Vandermondovo matriko.
+        % lastnost 3
+        \item \label{lastnost 3}Krožne matrike tvorijo komutativno algebro, ker je za poljubni dve matriki 
+        $A$ in $B$, vsota $A + B$ tudi krožna matrika, prav tako je krožna matrika tudi njun produkt 
+        $AB$, ter tudi velja $AB = BA$.
+\end{itemize}
+% konec neoštevilčenega seznama
+\end{frame}
+\begin{frame}
+        \cite{gray}
+\frametitle{Literatura}
+\bibliographystyle{siam}
+\bibliography{literatura}
+\end{frame}
+
+
+
+\end{document}
+

@@ -7,8 +7,12 @@ body {
     text-align: justify;
 }
 
+h1 {
+    color: #313bbe;
+}
 h2 { 
     margin-top: 1em;
+    font-size: 1.3em;
 }
 
 
@@ -40,6 +44,7 @@ a:hover {
 
 
 .slika {
+    width: 25%;
     float: right;
     text-align: center;
     font-size: 0.9em;

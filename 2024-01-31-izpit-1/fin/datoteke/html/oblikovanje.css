@@ -22,12 +22,15 @@ body {
     margin: auto;
     text-align: justify;
 }
-
+h1{
+    color: rgb(202, 110, 153);
+}
 .persian {
     font-size: 0.9em;
     text-align: left;
     float: right;
     margin-left: 2em;
+    width: 40%;
 }
 
 img {
